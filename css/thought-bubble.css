@@ -1,0 +1,38 @@
+#thought-bubble {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+    max-width: 80%;
+    border: 2px solid #FF69B4;
+    z-index: 10;
+    display: none;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+    position: relative;
+}
+
+#thought-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid white;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
